@@ -12,3 +12,6 @@ print(mean(x))
 
 library(rafalib)
 print(popsd(x))
+
+set.seed(1)
+print(mean(sample(x, 25)))
