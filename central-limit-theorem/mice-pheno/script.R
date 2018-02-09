@@ -9,3 +9,6 @@ dat <- na.omit(dat)
 library(dplyr)
 x <- dat %>% filter(Sex=='M') %>% filter(Diet=='chow') %>% select(Bodyweight) %>% unlist
 print(mean(x))
+
+library(rafalib)
+print(popsd(x))
