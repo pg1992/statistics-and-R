@@ -9,3 +9,7 @@ dat <- na.omit( read.csv(filename) )
 # normal distribution, what proportion of these numbers are within one standard
 # deviation away from the list's average?
 prop_1sd <- 2*pnorm(1) - 1
+
+# What proportion of these numbers are within two standard deviations away from
+# the list's average?
+prop_2sd <- 2*pnorm(2) - 1
