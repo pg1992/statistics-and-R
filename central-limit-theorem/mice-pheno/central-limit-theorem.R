@@ -13,3 +13,7 @@ prop_1sd <- 2*pnorm(1) - 1
 # What proportion of these numbers are within two standard deviations away from
 # the list's average?
 prop_2sd <- 2*pnorm(2) - 1
+
+# What proportion of these numbers are within three standard deviations away
+# from the list's average?
+prop_3sd <- 2*pnorm(3) - 1
