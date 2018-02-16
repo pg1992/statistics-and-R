@@ -51,6 +51,9 @@ hist(avgs)
 qqnorm(avgs)
 qqline(avgs)
 
+# What is the average of the distribution of the sample average?
+avg_dist <- mean(avgs)
+
 # Answers per se
 print(paste('A  1 - Proportion inside 1 sigma:', prop_1sd))
 print(paste('A  2 - Proportion inside 2 sigma:', prop_2sd))
@@ -58,3 +61,4 @@ print(paste('A  3 - Proportion inside 3 sigma:', prop_3sd))
 print(paste('A  4 - Proportion inside 1 sigma of y:', prop_y_1sd))
 print(paste('A  5 - Proportion inside 2 sigma of y:', prop_y_2sd))
 print(paste('A  6 - Proportion inside 3 sigma of y:', prop_y_3sd))
+print(paste('A  9 - Average of the distribution of the sample averages:', avg_dist))
