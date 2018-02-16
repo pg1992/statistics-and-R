@@ -34,6 +34,23 @@ prop_y_2sd <- mean(abs(y - mean(y)) <= 2*popsd(y))
 # from the list's average?
 prop_y_3sd <- mean(abs(y - mean(y)) <= 3*popsd(y))
 
+# We will now take a sample of size 25 from the population of males on the chow
+# diet. The average of this sample is our random variable. We will use the
+# replicate to observe 10,000 realizations of this random variable. Set the
+# seed at 1, generate these 10,000 averages. Make a histogram and qq-plot of
+# these 10,000 numbers against the normal distribution.
+#
+# We can see that, as predicted by the CLT, the distribution of the random
+# variable is very well approximated by the normal distribution.
+
+set.seed(1)
+y <- filter(dat, Sex=="M" & Diet=="chow") %>% select(Bodyweight) %>% unlist
+avgs <- replicate(10000, mean( sample(y, 25)))
+mypar(1,2)
+hist(avgs)
+qqnorm(avgs)
+qqline(avgs)
+
 # Answers per se
 print(paste('A  1 - Proportion inside 1 sigma:', prop_1sd))
 print(paste('A  2 - Proportion inside 2 sigma:', prop_2sd))
